@@ -1,0 +1,8 @@
+The main purpose of middleware is to allow for code to be run between receiving a request and sending a response.
+
+
+syntax:
+app.use(function(err,req, res, next) {
+  // ... do some stuff
+  next();
+});
