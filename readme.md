@@ -19,6 +19,54 @@ This is a YouTube clone project, aiming to replicate some of the core features o
 - **Database:** [Specify your database, e.g., MongoDB]
 - **Authentication:** [Specify your authentication method, e.g., JWT]
 
+## NOTES
+
+HTTP Headers
+- metadata --> key value sent along with the request and response
+
+(caching , authentication , manage states)
+
+### x-Prefix  -> 2012 (x - deprecated)
+- Request Headers ---> from client
+- Response Headers ---> from server
+- Representation Headers ---> ecoding / compresion
+- Payload Headers ---> data
+
+
+#### Most Common Headers
+- Accept : application/json
+- User-Agent : browser / device
+- Content-Type 
+- Authorization : Bearer token (JWT)
+- Cache-Control : It is used to set the time for which the response can be cached.
+- Cookie
+
+
+### HTTP Status Codes
+- 1xx : Informational
+- 2xx : Success
+- 3xx : Redirection
+- 4xx : Client Error
+- 5xx : Server Error
+
+Most common status codes
+- 200 : OK
+- 201 : Created
+- 204 : No Content
+- 304 : Not Modified
+- 400 : Bad Request
+- 401 : Unauthorized
+- 403 : Forbidden
+- 404 : Not Found
+- 500 : Internal Server Error
+- 502 : Bad Gateway
+- 503 : Service Unavailable
+- 504 : Gateway Timeout
+
+
+
+
+
 ## Getting Started
 
 1. **Clone the repository:**
