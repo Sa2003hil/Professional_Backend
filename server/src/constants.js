@@ -1,1 +1,1 @@
-export const DB_NAME = 'Medofin'; 
+export const DB_NAME = 'Professional_Backend'; 
