@@ -67,7 +67,7 @@ userSchema.methods.generateAccessToken = function () {
         // payload
         _id: this._id,
         email: this.email,
-        usernam: this.username,
+        username: this.username,
         fullName: this.fullName,
     },
         process.env.ACCESS_TOKEN_SECRET,
