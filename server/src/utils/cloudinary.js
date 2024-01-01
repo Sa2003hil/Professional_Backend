@@ -19,15 +19,24 @@ cloudinary.config({
 
 const uploadOnCloudinary = async (localFilePath) => {
     try {
+
         if (!localFilePath) return null
+
         // upload the file on cloudinary
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "auto"
         })
+
+        // console.log(response);
+
         // file uploaded successfully
-        console.log("File uploaded successfull",
-            response.url
-        );
+        // console.log("File uploaded successfull",
+        //     response.url
+        // );
+
+        //  now when the file is uploaded on clodinary then unlink the file
+        fs.unlinkSync(localFilePath) // sync is used because we want to wait for the file to be deleted first and then we want to return the response
+
         return response;
     } catch (error) {
         // now remove the locally saved tempraroy files as upload operation got failed
@@ -39,6 +48,8 @@ const uploadOnCloudinary = async (localFilePath) => {
 
 export { uploadOnCloudinary }
 
+
+//  this is just for testing purpose
 // cloudinary.v2.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
 //     { public_id: "olympic_flag" },
 //     function (error, result) { console.log(result); });
